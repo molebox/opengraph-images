@@ -61,7 +61,7 @@ export default function App() {
                 lineHeight: 1
               }}
             >
-              How I made opengraph images with serverless functions
+              {window.title}
             </Textfit>
           </h1>
           <div
@@ -85,11 +85,11 @@ export default function App() {
                 }
               }}
             >
-              <li>ideas</li>
-              <li>blogging</li>
-              <li>thoughts</li>
+              {window.tags.map(tag => (
+                <li key={tag}>{tag}</li>
+              ))}
             </ul>
-            <span>@studio_hungry</span>
+              <span>{window.author}</span>
           </div>
         </div>
       </div>

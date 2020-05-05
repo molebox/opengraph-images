@@ -1,4 +1,6 @@
 const playwright = require("playwright-aws-lambda");
+const fs = require("fs");
+const script = fs.readFileSync("./image.js", "utf-8");
 
 exports.handler = async function(event, ctx) {
     const browser = await playwright.launchChromium();
@@ -11,10 +13,11 @@ exports.handler = async function(event, ctx) {
     </head>
 
     <body>
-        <div id="haines"><div>HAINES</div></div>
+        <div id="haines"><div>Yo HAINES</div></div>
     </body>
     </html>
     `);
+    await page.addScriptTag({ content: script});
     const boundingRect = await page.evaluate(() => {
         const haines = document.getElementById("haines");
         const { x, y, width, height } = haines.children[0].getBoundingClientRect();

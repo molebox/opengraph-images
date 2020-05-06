@@ -1,7 +1,7 @@
 const cloudinary = require("cloudinary").v2;
 const qs = require("querystring");
 cloudinary.config({
-    cloud_name: richardhaines,
+    cloud_name: "richardhaines",
     api_key: process.env.CLOUDINARY_KEY,
     api_secret: process.env.CLOUDINARY_SECRET
 });

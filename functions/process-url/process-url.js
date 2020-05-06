@@ -37,4 +37,4 @@ exports.handler = async function(event, ctx) {
     } catch (e) {
         console.log(e);
     }
-}
+};

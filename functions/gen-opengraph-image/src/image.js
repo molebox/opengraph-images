@@ -52,7 +52,7 @@ export default function App() {
             }}
           >
             <Textfit
-              max={256}
+              max={200}
               min={24}
               style={{
                 minHeight: "80%",

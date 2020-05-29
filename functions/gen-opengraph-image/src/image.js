@@ -55,8 +55,8 @@ export default function App() {
               max={200}
               min={24}
               style={{
-                minHeight: "80%",
-                maxHeight: "80%",
+                minHeight: "70%",
+                maxHeight: "70%",
                 maxWidth: "80%",
                 lineHeight: 1
               }}
